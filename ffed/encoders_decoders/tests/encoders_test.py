@@ -1,7 +1,5 @@
 from ffed import EncoderEnum
 
-expected_output = {}
-
 string_and_expected_output = {
     "url": {
         "string": 'http://example.org/"%<>\^`{|}',

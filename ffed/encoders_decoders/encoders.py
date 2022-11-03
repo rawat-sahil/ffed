@@ -12,10 +12,10 @@ from ffed.encoders_decoders.abstract_encoder_decoder import AbstractEncoderDecod
 class Base_x(AbstractEncoderDecoder):
     base: str
 
-    def encode(self, plain_text: bytes):
+    def encode(self, byte_string: bytes):
         encoder = getattr(base64, f"b{self.base}encode")
 
-        return encoder(plain_text)
+        return encoder(byte_string)
 
     def decode(self, encoded_string: bytes):
         decoder = getattr(base64, f"b{self.base}decode")
