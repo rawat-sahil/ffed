@@ -12,15 +12,15 @@ from ffed.encoders_decoders.abstract_encoder_decoder import AbstractEncoderDecod
 class Base_x(AbstractEncoderDecoder):
     base: str
 
-    def encode(self, byte_string: bytes):
+    def encode(self, plain_text: str):
         encoder = getattr(base64, f"b{self.base}encode")
 
-        return encoder(byte_string)
+        return encoder(plain_text.encode()).decode()
 
-    def decode(self, encoded_string: bytes):
+    def decode(self, encoded_string: str):
         decoder = getattr(base64, f"b{self.base}decode")
 
-        return decoder(encoded_string)
+        return decoder(encoded_string.encode()).decode()
 
 
 class URL(AbstractEncoderDecoder):

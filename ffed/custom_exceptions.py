@@ -4,3 +4,7 @@ class EncoderException(Exception):
 
 class MutuallyExclusiveOptionsException(Exception):
     pass
+
+
+class InputException(Exception):
+    pass

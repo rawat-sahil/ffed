@@ -1,5 +1,15 @@
 # ffed (full-fledged encoder decoder)
 
+## Usage
+
+```shell
+# To get the help section
+ffed --help
+
+# To get the help section of specific sub command
+ffed encode --help
+```
+
 # todo
 
 - [ ] test functions for library hashes

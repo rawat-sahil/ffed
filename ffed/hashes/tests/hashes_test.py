@@ -15,7 +15,7 @@ expected_output = {
 class TestHashes:
     def test_hashes_all(self):
         for hash_algo in expected_output:
-            hashing_algo_object: LibraryHashes = getattr(HashesEnum, hash_algo).value
+            hashing_algo_object: LibraryHashes = HashesEnum[hash_algo].value
 
             hashed_string = hashing_algo_object.generate_hexdigest(test_string)
 
