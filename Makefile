@@ -15,3 +15,5 @@ test:
 clean:
 	find ./ -type d -name ".pytest_cache" | xargs rm -rf
 	find ./ -type d -name "__pycache__" | xargs rm -rf
+	find ./ -type d -name ".benchmarks" | xargs rm -rf
+	find ./ -type d -name "dist" | xargs rm -rf
